@@ -18,13 +18,6 @@ const itemVariants = {
   },
 };
 
-const cardHover = {
-  hover: { 
-    y: -5,
-    boxShadow: "0 10px 30px -10px rgba(0, 0, 0, 0.5)",
-    transition: { duration: 0.3 }
-  }
-};
 
 export const About = () => {
   return (

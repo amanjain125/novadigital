@@ -14,13 +14,16 @@ export const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = navLinks.map(link => document.querySelector(link.href));
+      const sections = navLinks.map(link => document.querySelector(link.href) as HTMLElement);
       const scrollPosition = window.scrollY + 150;
 
       for (const section of sections) {
-        if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-          setActiveSection(section.id);
-          break;
+        if (section) {
+          const htmlSection = section as HTMLElement;
+          if (scrollPosition >= htmlSection.offsetTop && scrollPosition < htmlSection.offsetTop + htmlSection.offsetHeight) {
+            setActiveSection(htmlSection.id);
+            break;
+          }
         }
       }
     };

@@ -3,7 +3,26 @@ import { motion } from 'framer-motion';
 import { FaHashtag, FaVideo, FaLaptopCode } from 'react-icons/fa';
 import { Modal } from './Modal';
 
-const services = [
+interface Service {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  color: string;
+  borderColor: string;
+  shadowClass: string;
+  details: {
+    subtitle: string;
+    overview: string;
+    whatWeDo: string;
+    ourApproach: string;
+    cta: {
+      text: string;
+      link: string;
+    };
+  };
+}
+
+const services: Service[] = [
   {
     icon: <FaHashtag className="text-3xl" />,
     title: "Social Media Management",
@@ -61,7 +80,7 @@ const services = [
 ];
 
 export const Services = () => {
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const handleCTAClick = (link: string) => {
     setSelectedService(null);
@@ -83,7 +102,7 @@ export const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service: Service, index: number) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -10 }}
@@ -120,7 +139,7 @@ export const Services = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">What We Do</h3>
                   <ul className="space-y-2">
-                    {selectedService.details.whatWeDo.split('\n').map((item, i) => (
+                    {selectedService.details.whatWeDo.split('\n').map((item: string, i: number) => (
                       <li key={i} className="flex items-start">
                         <span className="text-neon-purple mr-2 mt-1">&#8227;</span>
                         {item.replace('– ', '')}

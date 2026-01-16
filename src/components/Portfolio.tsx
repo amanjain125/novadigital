@@ -2,7 +2,25 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Modal } from './Modal';
 
-const projects = [
+interface Project {
+  category: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  details: {
+    overview: string;
+    challenge: string;
+    solution: string;
+    delivered: string;
+    impact: string;
+    cta: {
+      text: string;
+      link: string;
+    };
+  };
+}
+
+const projects: Project[] = [
   {
     category: "Website Development",
     title: "Baklavachi — Turkish Sweets Website",
@@ -57,7 +75,7 @@ const projects = [
 ];
 
 export const Portfolio = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <>
@@ -74,7 +92,7 @@ export const Portfolio = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {projects.map((project: Project, index: number) => (
               <div key={index} onClick={() => setSelectedProject(project)}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
@@ -106,7 +124,7 @@ export const Portfolio = () => {
               {selectedProject.details.overview && (
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Project Overview</h3>
-                  {selectedProject.details.overview.split('\n').map((line, i) => (
+                  {selectedProject.details.overview.split('\n').map((line: string, i: number) => (
                     <p key={i} className="mb-1">{line}</p>
                   ))}
                 </div>
@@ -114,7 +132,7 @@ export const Portfolio = () => {
               {selectedProject.details.challenge && (
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">The Challenge</h3>
-                  {selectedProject.details.challenge.split('\n').map((line, i) => (
+                  {selectedProject.details.challenge.split('\n').map((line: string, i: number) => (
                     <p key={i} className="mb-1">{line}</p>
                   ))}
                 </div>
@@ -122,7 +140,7 @@ export const Portfolio = () => {
               {selectedProject.details.solution && (
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Our Solution</h3>
-                  {selectedProject.details.solution.split('\n').map((line, i) => (
+                  {selectedProject.details.solution.split('\n').map((line: string, i: number) => (
                     <p key={i} className="mb-1">{line}</p>
                   ))}
                 </div>
@@ -130,7 +148,7 @@ export const Portfolio = () => {
               {selectedProject.details.delivered && (
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">What We Delivered</h3>
-                  {selectedProject.details.delivered.split('\n').map((line, i) => (
+                  {selectedProject.details.delivered.split('\n').map((line: string, i: number) => (
                     <p key={i} className="mb-1">{line}</p>
                   ))}
                 </div>
@@ -138,7 +156,7 @@ export const Portfolio = () => {
               {selectedProject.details.impact && (
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Impact</h3>
-                  {selectedProject.details.impact.split('\n').map((line, i) => (
+                  {selectedProject.details.impact.split('\n').map((line: string, i: number) => (
                     <p key={i} className="mb-1">{line}</p>
                   ))}
                 </div>
