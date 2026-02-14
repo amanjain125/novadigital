@@ -71,6 +71,23 @@ const projects: Project[] = [
         link: "#" // Link to NovaDigital's contact or services page
       }
     }
+  },
+  {
+    category: "Social Media Management",
+    title: "Taj Prop Estates",
+    description: "Strategic social media management for a real estate business, focusing on property showcases and brand trust.",
+    imageUrl: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Placeholder image for Taj Prop Estates
+    details: {
+      overview: "Taj Prop Estates is a premium real estate firm. We manage their digital presence on Instagram and Facebook to connect with potential buyers and investors.",
+      challenge: "Real estate is competitive. The challenge was to stand out, showcase properties effectively, and build trust with a digital-first audience.",
+      solution: "We implemented a content strategy featuring high-quality property walkthroughs, market insights, and consistent branding across both Instagram and Facebook.",
+      delivered: "– Instagram & Facebook Management\n– Property Showcase Reels\n– Lead Generation Strategy\n– Brand Consistency",
+      impact: "– Increased engagement and inquiries\n– Established Taj Prop Estates as a trusted name",
+      cta: {
+        text: "View Instagram Profile",
+        link: "https://www.instagram.com/tajpropestates?igsh=Y3ZoZmh2cTlqMWgx"
+      }
+    }
   }
 ];
 
@@ -100,7 +117,7 @@ export const Portfolio = () => {
                 >
                   <img src={project.imageUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent" />
-                  
+
                   <div className="absolute bottom-0 left-0 p-8 w-full">
                     <div className="text-neon-blue text-sm font-bold mb-2 uppercase tracking-wider">{project.category}</div>
                     <h3 className="text-2xl font-bold mb-2">{project.title}</h3>

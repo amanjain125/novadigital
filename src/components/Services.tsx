@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaHashtag, FaVideo, FaLaptopCode } from 'react-icons/fa';
+import { FaHashtag, FaVideo, FaLaptopCode, FaBullhorn, FaSearch } from 'react-icons/fa';
 import { Modal } from './Modal';
 
 interface Service {
@@ -73,6 +73,42 @@ const services: Service[] = [
       ourApproach: "We combine design, performance, and strategy to build websites that create trust and drive action.",
       cta: {
         text: "Build My Website",
+        link: "#contact"
+      }
+    }
+  },
+  {
+    icon: <FaBullhorn className="text-3xl" />,
+    title: "Digital Marketing & Ads",
+    description: "Stop wasting money on ads that don't convert. We run precision-targeted Meta and Google Ad campaigns designed to bring you high-quality leads.",
+    color: "text-orange-500",
+    borderColor: "group-hover:border-orange-500/50",
+    shadowClass: "group-hover:shadow-[0_0_20px_theme(colors.orange-500)]",
+    details: {
+      subtitle: "High-ROI Paid Campaigns That Scale",
+      overview: "Organic reach is great, but paid ads are faster. We design and manage high-performance ad campaigns on Facebook, Instagram, and Google to put your business in front of the right people at the right time.",
+      whatWeDo: "– Meta Ads (Facebook & Instagram)\n– Google Search & Display Ads\n– Audience Targeting & Retargeting\n– Ad Creative Design & Copywriting\n– A/B Testing & Optimization\n– Monthly Performance Reports",
+      ourApproach: "We focus on metrics that matter—Leads, Sales, and ROAS—not just vanity metrics like impressions.",
+      cta: {
+        text: "Start Scaling Today",
+        link: "#contact"
+      }
+    }
+  },
+  {
+    icon: <FaSearch className="text-3xl" />,
+    title: "SEO & Google Listing",
+    description: "Dominate your local market and get found by customers who are actively searching for your services.",
+    color: "text-green-500",
+    borderColor: "group-hover:border-green-500/50",
+    shadowClass: "group-hover:shadow-[0_0_20px_theme(colors.green-500)]",
+    details: {
+      subtitle: "Be Fixed at the Top of Search Results",
+      overview: "When customers search for your services, they trust the top results. We help you climb the rankings on Google Maps and Search, ensuring your business is the first one they see and the one they choose.",
+      whatWeDo: "– Google My Business (GMB) Optimization\n– Local SEO Strategy\n– On-Page & Off-Page SEO\n– Keyword Research & Competitor Analysis\n– Review Management & Reputation Building\n– Citation Building & Directory Listings",
+      ourApproach: "SEO is a long-term game. We build a solid foundation that keeps your business ranking high for years to come.",
+      cta: {
+        text: "Rank Higher Now",
         link: "#contact"
       }
     }
