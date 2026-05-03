@@ -7,6 +7,7 @@ interface Project {
   title: string;
   description: string;
   imageUrl: string;
+  techStack?: string[];
   details: {
     overview: string;
     challenge: string;
@@ -22,10 +23,47 @@ interface Project {
 
 const projects: Project[] = [
   {
+    category: "Full-Stack Development",
+    title: "PETGO — All-in-One Pet Care Platform",
+    description: "A multi-service platform simplifying pet care through ride booking, ambulance support, and food delivery.",
+    imageUrl: "/petgo_preview.png",
+    techStack: ["Node.js", "Express.js", "SQLite", "HTML/CSS", "JavaScript"],
+    details: {
+      overview: "PETGO is a major milestone project—a complete web application built from scratch to simplify pet care. It integrates essential services like pet ride booking, ambulance support, and food delivery into one seamless experience.",
+      challenge: "Building a multi-service system required designing a scalable architecture that could handle diverse needs while maintaining a cohesive user experience.",
+      solution: "We developed a robust full-stack solution with a Node.js/Express backend and a modern, video-based UI to create an engaging startup-style feel.",
+      delivered: "– Video-based interactive UI\n– Integrated Pet Ride & Ambulance booking\n– Pet food delivery system integration\n– RESTful API system\n– Responsive & real-time frontend",
+      impact: "Showcases expertise in full-stack architecture, problem-solving, and building user-focused applications. Looking forward to building more impactful projects.",
+      cta: {
+        text: "View Live Project",
+        link: "https://pet-go.onrender.com/"
+      }
+    }
+  },
+  {
+    category: "Full-Stack Development",
+    title: "NaturalCare — Natural Wellness Platform",
+    description: "A full-stack application providing personalized natural remedies for skin and hair care based on skin type.",
+    imageUrl: "/naturalcare_preview.png",
+    techStack: ["Python", "Flask", "SQLite", "Git", "Render"],
+    details: {
+      overview: "NaturalCare is a full-stack web application focused on providing simple, natural home remedies for skin and hair care. Inspired by modern wellness platforms, it offers a clean and calm user experience.",
+      challenge: "Organizing complex remedy data (ingredients, preparation, precautions) into a clean, easy-to-navigate interface for different skin types.",
+      solution: "Built using Python (Flask) and SQLite, the platform guides users through natural treatments based on their specific skin and hair concerns.",
+      delivered: "– Personalized skin type selection\n– Repository of common skin & hair problems\n– Step-by-step remedies (ingredients, preparation, usage, precautions)\n– Clean, minimalist wellness UI",
+      impact: "Provides an accessible digital solution for natural self-care and holistic wellness.",
+      cta: {
+        text: "View Live Project",
+        link: "https://natural-skin.onrender.com/"
+      }
+    }
+  },
+  {
     category: "Website Development",
     title: "Baklavachi — Turkish Sweets Website",
     description: "A modern business website designed to showcase premium Turkish sweets and improve online presence.",
     imageUrl: "/baklavachi.png",
+    techStack: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
     details: {
       overview: "Baklavachi is a Turkish sweets brand specializing in traditional desserts such as baklava. The brand needed a professional website to establish a strong online presence and showcase its premium products.",
       challenge: "– No professional website\n– Limited online credibility\n– Products not presented clearly online",
@@ -43,6 +81,7 @@ const projects: Project[] = [
     title: "Alankruti House of Designs",
     description: "Instagram account handling with reels, content strategy, and brand-consistent visuals.",
     imageUrl: "/alankruti.png",
+    techStack: ["Instagram", "Content Strategy", "Reels Editing"],
     details: {
       overview: "Alankruti House of Designs is a fashion brand focused on designer wear and custom outfits. The goal was to improve Instagram presence and brand consistency.",
       challenge: "– Inconsistent posting\n– Low visual consistency\n– Engagement improvement needed",
@@ -60,6 +99,7 @@ const projects: Project[] = [
     title: "Taj Prop Estates",
     description: "Strategic social media management for a real estate business, focusing on property showcases and brand trust.",
     imageUrl: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Placeholder image for Taj Prop Estates
+    techStack: ["Meta Ads", "Instagram Marketing", "Lead Generation"],
     details: {
       overview: "Taj Prop Estates is a premium real estate firm. We manage their digital presence on Instagram and Facebook to connect with potential buyers and investors.",
       challenge: "Real estate is competitive. The challenge was to stand out, showcase properties effectively, and build trust with a digital-first audience.",
@@ -77,6 +117,7 @@ const projects: Project[] = [
     title: "NovaDigital — Agency Website & Brand System",
     description: "The NovaDigital website was designed and built as an internal project to represent the agency’s capabilities, standards, and approach to modern digital experiences.",
     imageUrl: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Placeholder image for NovaDigital website
+    techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
     details: {
       overview: "The NovaDigital website was designed and built as an internal project to represent the agency’s capabilities, standards, and approach to modern digital experiences.\n\nRather than using templates, the website was created from scratch to showcase premium UI/UX, performance-focused development, and strong brand positioning — the same quality we deliver to clients.",
       challenge: "As a digital agency, NovaDigital needed a website that:\n\nLooked premium and credible\nCommunicated services clearly\nDemonstrated modern UI/UX standards\nReflected a high-end, technology-driven brand\n\nThe website had to stand out while remaining clean and conversion-focused.",
@@ -136,6 +177,16 @@ export const Portfolio = () => {
             <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg mb-6" />
             <div className="text-neon-blue text-sm font-bold mb-2 uppercase tracking-wider">{selectedProject.category}</div>
             <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
+
+            {selectedProject.techStack && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {selectedProject.techStack.map((tech, i) => (
+                  <span key={i} className="px-3 py-1 bg-navy-700 text-neon-blue text-xs font-bold rounded-full border border-neon-blue/30">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
 
             <div className="space-y-6 text-gray-300">
               {selectedProject.details.overview && (
