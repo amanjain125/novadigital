@@ -6,15 +6,15 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-2">
-            <h2 className="text-2xl font-display font-bold mb-4">NOVA<span className="text-neon-blue">DIGITAL</span></h2>
+            <h2 className="text-2xl font-display font-bold mb-4">ENHANCE<span className="text-neon-blue">MARKETING</span></h2>
             <p className="text-gray-400 max-w-sm mb-6">
               We help businesses stand out, scale faster, and stay relevant in the digital world.
             </p>
             <div className="flex gap-4">
-              <a href="mailto:novadigital162@gmail.com" className="p-2 bg-white/5 rounded-full hover:bg-neon-blue hover:text-white transition-colors"><FaEnvelope /></a>
+              <a href="mailto:enhancemarketing162@gmail.com" className="p-2 bg-white/5 rounded-full hover:bg-neon-blue hover:text-white transition-colors"><FaEnvelope /></a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
@@ -23,7 +23,7 @@ export const Footer = () => {
               <li><a href="#services" className="hover:text-neon-blue transition-colors">Website Development</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
@@ -33,9 +33,9 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-white/5 text-center text-gray-500 text-sm">
-          <p>&copy; 2026 NovaDigital. All Rights Reserved.</p>
+          <p>&copy; 2026 Enhance Marketing. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

@@ -99,7 +99,7 @@ export const Hero = () => {
                 <FaInstagram className="text-xl" />
               </div>
               <div>
-                <div className="text-white font-bold">@novadigital</div>
+                <div className="text-white font-bold">@enhancemarketing</div>
                 <div className="text-xs text-gray-400">Social Growth</div>
               </div>
             </div>

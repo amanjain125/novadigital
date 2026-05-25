@@ -67,7 +67,7 @@ const projects: Project[] = [
     details: {
       overview: "Baklavachi is a Turkish sweets brand specializing in traditional desserts such as baklava. The brand needed a professional website to establish a strong online presence and showcase its premium products.",
       challenge: "– No professional website\n– Limited online credibility\n– Products not presented clearly online",
-      solution: "NovaDigital designed and developed a custom business website focused on:\n– Clean, premium UI/UX\n– Mobile-first responsiveness\n– Clear product presentation",
+      solution: "Enhance Marketing designed and developed a custom business website focused on:\n– Clean, premium UI/UX\n– Mobile-first responsiveness\n– Clear product presentation",
       delivered: "– Custom business website\n– Modern UI/UX design\n– Responsive layout\n– Optimized structure",
       impact: "– Stronger brand credibility\n– Professional digital identity",
       cta: {
@@ -85,7 +85,7 @@ const projects: Project[] = [
     details: {
       overview: "Alankruti House of Designs is a fashion brand focused on designer wear and custom outfits. The goal was to improve Instagram presence and brand consistency.",
       challenge: "– Inconsistent posting\n– Low visual consistency\n– Engagement improvement needed",
-      solution: "NovaDigital managed the Instagram account with:\n– Content planning\n– Reels editing\n– Brand-aligned visuals",
+      solution: "Enhance Marketing managed the Instagram account with:\n– Content planning\n– Reels editing\n– Brand-aligned visuals",
       delivered: "– Instagram account handling\n– Reels & post editing\n– Content calendar\n– Engagement strategy",
       impact: "– Improved visual identity\n– Better engagement quality",
       cta: {
@@ -114,19 +114,19 @@ const projects: Project[] = [
   },
   {
     category: "Website Development · Brand Identity",
-    title: "NovaDigital — Agency Website & Brand System",
-    description: "The NovaDigital website was designed and built as an internal project to represent the agency’s capabilities, standards, and approach to modern digital experiences.",
-    imageUrl: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Placeholder image for NovaDigital website
+    title: "Enhance Marketing — Agency Website & Brand System",
+    description: "The Enhance Marketing website was designed and built as an internal project to represent the agency’s capabilities, standards, and approach to modern digital experiences.",
+    imageUrl: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Placeholder image for Enhance Marketing website
     techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
     details: {
-      overview: "The NovaDigital website was designed and built as an internal project to represent the agency’s capabilities, standards, and approach to modern digital experiences.\n\nRather than using templates, the website was created from scratch to showcase premium UI/UX, performance-focused development, and strong brand positioning — the same quality we deliver to clients.",
-      challenge: "As a digital agency, NovaDigital needed a website that:\n\nLooked premium and credible\nCommunicated services clearly\nDemonstrated modern UI/UX standards\nReflected a high-end, technology-driven brand\n\nThe website had to stand out while remaining clean and conversion-focused.",
-      solution: "NovaDigital designed and developed its own website with a product-level mindset, combining strategy, design, and technology.\n\nThe solution focused on:\n\nModern dark-themed UI with glassmorphism\nClean typography and layout hierarchy\nInteractive elements and micro-animations\nStrong storytelling through visuals\nOptimized performance and responsiveness",
+      overview: "The Enhance Marketing website was designed and built as an internal project to represent the agency’s capabilities, standards, and approach to modern digital experiences.\n\nRather than using templates, the website was created from scratch to showcase premium UI/UX, performance-focused development, and strong brand positioning — the same quality we deliver to clients.",
+      challenge: "As a digital agency, Enhance Marketing needed a website that:\n\nLooked premium and credible\nCommunicated services clearly\nDemonstrated modern UI/UX standards\nReflected a high-end, technology-driven brand\n\nThe website had to stand out while remaining clean and conversion-focused.",
+      solution: "Enhance Marketing designed and developed its own website with a product-level mindset, combining strategy, design, and technology.\n\nThe solution focused on:\n\nModern dark-themed UI with glassmorphism\nClean typography and layout hierarchy\nInteractive elements and micro-animations\nStrong storytelling through visuals\nOptimized performance and responsiveness",
       delivered: "Custom-designed agency website\nBrand identity & visual system\nResponsive, mobile-first layout\nInteractive sections and animations\nPerformance-optimized structure\nConversion-focused content flow",
-      impact: "Clear and professional agency positioning\nStrong first impression for potential clients\nDemonstration of real-world capabilities\nA scalable platform for showcasing future work\n\nWhy This Case Study Matters:\n\nThis project reflects how NovaDigital approaches every client website — with strategy, attention to detail, and a focus on long-term growth.\n\nWhat you see here is exactly what clients can expect when working with us.",
+      impact: "Clear and professional agency positioning\nStrong first impression for potential clients\nDemonstration of real-world capabilities\nA scalable platform for showcasing future work\n\nWhy This Case Study Matters:\n\nThis project reflects how Enhance Marketing approaches every client website — with strategy, attention to detail, and a focus on long-term growth.\n\nWhat you see here is exactly what clients can expect when working with us.",
       cta: {
         text: "Build a Website Like This for Your Business",
-        link: "#" // Link to NovaDigital's contact or services page
+        link: "#" // Link to Enhance Marketing's contact or services page
       }
     }
   }

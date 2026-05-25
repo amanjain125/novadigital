@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
           <input
             type="hidden"
             name="_subject"
-            value="New Contact Form Message – NovaDigital"
+            value="New Contact Form Message – Enhance Marketing"
           />
           <div className="form-group">
             <input

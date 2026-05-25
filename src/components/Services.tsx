@@ -32,7 +32,7 @@ const services: Service[] = [
     shadowClass: "group-hover:shadow-[0_0_20px_theme(colors.neon-blue)]",
     details: {
       subtitle: "End-to-End Instagram & Brand Growth",
-      overview: "We manage your social media presence from strategy to execution. NovaDigital handles everything so brands can focus on their business while we build visibility, engagement, and consistency.",
+      overview: "We manage your social media presence from strategy to execution. Enhance Marketing handles everything so brands can focus on their business while we build visibility, engagement, and consistency.",
       whatWeDo: "– Social media strategy & planning\n– Content calendar creation\n– Instagram account handling\n– Post & reel scheduling\n– Caption writing & hashtag research\n– Visual consistency & branding\n– Engagement-focused posting\n– Performance monitoring & optimization",
       ourApproach: "We don’t believe in random posting. Every piece of content is planned, aligned with your brand, and optimized for growth.",
       cta: {
@@ -50,7 +50,7 @@ const services: Service[] = [
     shadowClass: "group-hover:shadow-[0_0_20px_theme(colors.neon-blue)]",
     details: {
       subtitle: "High-Retention Content That Stops the Scroll",
-      overview: "Short-form video is the fastest way to capture attention. NovaDigital creates high-retention reels and videos designed for modern platforms.",
+      overview: "Short-form video is the fastest way to capture attention. Enhance Marketing creates high-retention reels and videos designed for modern platforms.",
       whatWeDo: "– Reel & short-form video editing\n– Trend-based hooks\n– Subtitles & motion graphics\n– Brand-aligned visual style\n– Fast-paced, retention-focused edits\n– Platform-optimized formats",
       ourApproach: "We focus on storytelling, pacing, and psychology to keep viewers watching and engaging.",
       cta: {
@@ -68,7 +68,7 @@ const services: Service[] = [
     shadowClass: "group-hover:shadow-[0_0_20px_theme(colors.neon-blue)]",
     details: {
       subtitle: "Modern Websites Built to Convert",
-      overview: "Your website is your digital foundation. NovaDigital designs and develops high-performance websites that look premium and work fast.",
+      overview: "Your website is your digital foundation. Enhance Marketing designs and develops high-performance websites that look premium and work fast.",
       whatWeDo: "– Custom website design\n– Business & portfolio websites\n– Mobile-first responsive layouts\n– Clean UI/UX design\n– SEO-friendly structure\n– Fast-loading performance optimization\n– Conversion-focused layout",
       ourApproach: "We combine design, performance, and strategy to build websites that create trust and drive action.",
       cta: {

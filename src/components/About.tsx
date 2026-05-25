@@ -34,7 +34,7 @@ export const About = () => {
           variants={containerVariants}
           className="text-center mb-16"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl font-display font-bold mb-3 text-white">About NovaDigital</motion.h2>
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl font-display font-bold mb-3 text-white">About Enhance Marketing</motion.h2>
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400">Built by engineers. Driven by creativity.</motion.p>
         </motion.div>
 
@@ -48,7 +48,7 @@ export const About = () => {
           {/* Left Column: Story */}
           <motion.div variants={itemVariants} className="md:col-span-3 space-y-6 text-gray-300 text-lg leading-relaxed">
             <p>
-              NovaDigital is a digital agency built by three school friends who shared a common interest in technology, creativity, and building meaningful digital experiences.
+              Enhance Marketing is a digital agency built by three school friends who shared a common interest in technology, creativity, and building meaningful digital experiences.
             </p>
             <p>
               What started during our second year of engineering quickly turned into a serious mission — helping businesses grow online with clarity, consistency, and modern digital systems.
@@ -83,11 +83,11 @@ export const About = () => {
                 <span className="text-neon-purple mr-3 text-2xl">◆</span>
                 Our Team
               </h3>
-              <p className="text-sm mb-4">NovaDigital is led by three founders with a shared vision of building meaningful digital solutions.</p>
+              <p className="text-sm mb-4">Enhance Marketing is led by three founders with a shared vision of building meaningful digital solutions.</p>
               <div className="space-y-3 text-sm">
                 <p><strong className="font-semibold text-gray-200 block">Aman R Jain</strong><span className="text-gray-400">Founder | Tech & Strategy</span></p>
-                <p><strong className="font-semibold text-gray-200 block">Kalyani Birajdar</strong><span className="text-gray-400">Founder | Content & Social Media</span></p>
-                <p><strong className="font-semibold text-gray-200 block">Mansi</strong><span className="text-gray-400">Founder | Design & Creative</span></p>
+                <p><strong className="font-semibold text-gray-200 block">Sehej Mehta</strong><span className="text-gray-400">Founder | Content & Social Media</span></p>
+                <p><strong className="font-semibold text-gray-200 block">Saanjh Mehta</strong><span className="text-gray-400">Founder | Design & Creative</span></p>
               </div>
             </motion.div>
           </motion.div>
