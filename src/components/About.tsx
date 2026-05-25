@@ -35,7 +35,7 @@ export const About = () => {
           className="text-center mb-16"
         >
           <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl font-display font-bold mb-3 text-white">About Enhance Marketing</motion.h2>
-          <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400">Built by engineers. Driven by creativity.</motion.p>
+          <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400">Built by creators. Driven by results.</motion.p>
         </motion.div>
 
         <motion.div 
@@ -48,13 +48,13 @@ export const About = () => {
           {/* Left Column: Story */}
           <motion.div variants={itemVariants} className="md:col-span-3 space-y-6 text-gray-300 text-lg leading-relaxed">
             <p>
-              Enhance Marketing is a digital agency built by three school friends who shared a common interest in technology, creativity, and building meaningful digital experiences.
+              At Enhance Marketing, we help brands build a strong, memorable digital presence. We are a team of creators and strategists passionate about branding, design, and social media.
             </p>
             <p>
-              What started during our second year of engineering quickly turned into a serious mission — helping businesses grow online with clarity, consistency, and modern digital systems.
+              We help businesses stand out, scale faster, and stay relevant with clean visuals, engaging content, and custom digital experiences.
             </p>
             <p>
-              Coming from an engineering background, we don’t rely on guesswork. We build structured, growth-focused solutions that combine strategy, design, and execution.
+              No guesswork, no overcomplication. We focus on structured, growth-focused solutions that connect with your audience and deliver real results.
             </p>
             <p className="font-display text-2xl text-white font-semibold italic border-l-4 border-neon-blue pl-6 py-2">
               “Good digital presence isn’t optional anymore — it’s essential.”
