@@ -5,14 +5,14 @@ const founders = [
     initials: "AJ"
   },
   {
-    name: "Sehej Mehta",
+    name: "Kalyani Birajdar",
     role: "Founder | Content & Social Media",
-    initials: "SM"
+    initials: "KB"
   },
   {
-    name: "Saanjh Mehta",
+    name: "Mansi",
     role: "Founder | Design & Creative",
-    initials: "SM"
+    initials: "M"
   }
 ];
 

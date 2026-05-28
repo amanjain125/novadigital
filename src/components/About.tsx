@@ -86,8 +86,8 @@ export const About = () => {
               <p className="text-sm mb-4">Enhance Marketing is led by three founders with a shared vision of building meaningful digital solutions.</p>
               <div className="space-y-3 text-sm">
                 <p><strong className="font-semibold text-gray-200 block">Aman R Jain</strong><span className="text-gray-400">Founder | Tech & Strategy</span></p>
-                <p><strong className="font-semibold text-gray-200 block">Sehej Mehta</strong><span className="text-gray-400">Founder | Content & Social Media</span></p>
-                <p><strong className="font-semibold text-gray-200 block">Saanjh Mehta</strong><span className="text-gray-400">Founder | Design & Creative</span></p>
+                <p><strong className="font-semibold text-gray-200 block">Kalyani Birajdar</strong><span className="text-gray-400">Founder | Content & Social Media</span></p>
+                <p><strong className="font-semibold text-gray-200 block">Mansi</strong><span className="text-gray-400">Founder | Design & Creative</span></p>
               </div>
             </motion.div>
           </motion.div>
