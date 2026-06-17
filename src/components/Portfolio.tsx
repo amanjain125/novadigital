@@ -6,7 +6,8 @@ interface Project {
   category: string;
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl?: string;
+  videoUrl?: string;
   techStack?: string[];
   details: {
     overview: string;
@@ -22,6 +23,115 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    category: "Personal Brand Growth",
+    title: "Aman R Jain(@duffer_16._) — Tech & AI Content Creator",
+    description: "Technology-focused Instagram page simplifying AI tools, coding concepts, and productivity hacks for students.",
+    imageUrl: "/aman_cover_page.jpeg",
+    techStack: ["Content Strategy", "Video Editing", "Thumbnail Design"],
+    details: {
+      overview: "Duffer is a technology-focused Instagram page created to simplify AI tools, coding concepts, productivity hacks, and emerging tech trends for students and aspiring developers. Through short-form educational content, the page consistently reaches and engages a tech-savvy audience.",
+      challenge: "Standing out in the crowded tech and AI niche, maintaining consistent growth, and delivering high-value educational content in an engaging short-form format.",
+      solution: "NovaDigital provided comprehensive content strategy, short-form video editing, and thumbnail design to optimize audience growth and organic reach.",
+      delivered: "– Content Strategy & Planning\n– Short-Form Video Editing\n– Thumbnail & Visual Design\n– Audience Growth Optimization\n– Organic Reach Enhancement",
+      impact: "– 181,000+ views on the highest-performing reel\n– 11.8K+ profile visits in the last 30 days\n– 920+ followers with organic growth\n– Multiple reels crossing 80K+ views",
+      cta: {
+        text: "View Instagram Profile",
+        link: "https://www.instagram.com/duffer_16._?igsh=MXRodGFwdmZoNm4ybw=="
+      }
+    }
+  },
+  {
+    category: "Personal Brand Growth",
+    title: "Mansi (@mansiii_this_side28) — Motivational Content Creator",
+    description: "Motivational content creator inspiring students with relatable life experiences and self-improvement lessons.",
+    imageUrl: "/mansi_cover_page.jpeg",
+    techStack: ["Content Strategy", "Storytelling", "Community Building"],
+    details: {
+      overview: "Mansi is a personal brand focused on inspiring students and young audiences through motivational content, relatable life experiences, and self-improvement lessons. By sharing authentic stories, mindset shifts, and insights from her engineering journey, she encourages her audience to stay consistent, overcome challenges, and keep growing every day.",
+      challenge: "Standing out in the motivational niche while maintaining authentic storytelling, relatable messaging for students, and consistent community-focused engagement.",
+      solution: "Implemented a content strategy centered on authentic storytelling through short-form videos, sharing relatable life lessons, and building an engaged community of students and young professionals.",
+      delivered: "– Authentic Storytelling & Short-Form Videos\n– Educational & Motivational Content\n– Relatable Messages for Students\n– Organic Audience Building",
+      impact: "– 98.8K+ views on the highest-performing reel\n– 46.1K+ views generated in the last 30 days\n– 3.8K+ interactions in the last 30 days\n– 370+ organically grown followers",
+      cta: {
+        text: "View Instagram Profile",
+        link: "https://www.instagram.com/reel/DZbq5vXCM_0/?igsh=MWZnbHBsOG53Z20zdw=="
+      }
+    }
+  },
+  {
+    category: "Video Production",
+    title: "Promotional Video",
+    description: "A high-energy product showcase and service commercial highlighting premium smartphone unboxing and high-precision UV screen protector installation.",
+    imageUrl: "https://images.pexels.com/photos/1786433/pexels-photo-1786433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    videoUrl: "/promotional_video.mp4",
+    techStack: ["Speed Ramping", "Sound Design", "Visual Transitions"],
+    details: {
+      overview: "A high-energy product showcase and service commercial highlighting premium smartphone unboxing and high-precision UV screen protector installation.",
+      challenge: "Showing step-by-step tech maintenance can easily become slow, clinical, and boring to watch. The challenge was to take routine, manual tasks and turn them into an exciting, premium visual experience that holds viewer attention.",
+      solution: "Dynamic Speed Ramping: Fast-forwarded through mundane tasks while snapping back to real-time for high-impact moments (like liquid pouring or UV light curing) to keep the pacing sharp.\nSlick Floating Transitions: Engineered creative, gravity-defying product transitions to give the shop a modern, high-tech aesthetic right from the start.\nImmersive Sound Design: Built a crisp, tactical soundscape where every cut, unboxing rip, and mechanical click syncs perfectly with the beat to maximize sensory engagement.",
+      delivered: "– Dynamic Speed Ramping\n– Slick Floating Transitions\n– Immersive Sound Design",
+      impact: "Turned routine, manual tasks into an exciting, premium visual experience that holds viewer attention.",
+      cta: {
+        text: "Close Project",
+        link: "#"
+      }
+    }
+  },
+  {
+    category: "Video Editing",
+    title: "OSCode GCU (@oscode_gcu) — Event Storytelling",
+    description: "Engaging short-form content and event recaps capturing the energy of community tech events.",
+    imageUrl: "/oscode.png",
+    techStack: ["Video Editing", "Content Creation", "Storytelling"],
+    details: {
+      overview: "OSCode GCU is a student-led technology community at Garden City University that promotes hackathons, open-source contributions, workshops, and innovation. As part of the social media team, I create engaging visual content that captures the energy of community events and communicates them effectively through short-form videos and social media posts.",
+      challenge: "Documenting key moments, increasing the appeal of community events, and strengthening the organization's digital presence while making technical initiatives more accessible and engaging for students.",
+      solution: "Crafted engaging short-form content with smooth transitions, synced visuals with music and motion graphics, and maintained a consistent visual identity aligned with the OSCode brand.",
+      delivered: "– Edited event recap reels and promotional videos\n– Selected and organized raw event footage\n– Synced visuals with music, text overlays, and motion graphics\n– Optimized videos for Instagram Reels",
+      impact: "Transformed raw event footage into engaging reels that showcased OSCode GCU’s activities in a professional and relatable way, strengthening their digital presence.",
+      cta: {
+        text: "View Instagram Profile",
+        link: "https://www.instagram.com/oscode_gcu?igsh=a241dXRuYXgyZHZh&utm_source=qr"
+      }
+    }
+  },
+  {
+    category: "Short-Form Content",
+    title: "Motivational Video — Time Management",
+    description: "A motivational short-form video combining cinematic clips with a meaningful message about planning and productivity.",
+    imageUrl: "/mansi28.jpeg",
+    techStack: ["Video Editing", "Cinematic Storytelling", "Social Media"],
+    details: {
+      overview: "A motivational short-form video created by combining cinematic clips with a meaningful message about time management and planning.",
+      challenge: "Creating engaging short-form content that conveys a deep, meaningful message without losing the audience's attention.",
+      solution: "Combined high-quality cinematic clips with a strong narrative focus to visually communicate the importance of planning.",
+      delivered: "– Short-form video editing\n– Cinematic clip sourcing and arrangement\n– Narrative and messaging alignment",
+      impact: "The content effectively highlights how having a clear plan can lead to better productivity and personal growth than merely being occupied.",
+      cta: {
+        text: "View Reel",
+        link: "https://www.instagram.com/reel/DZbq5vXCM_0/?igsh=MWZnbHBsOG53Z20zdw=="
+      }
+    }
+  },
+  {
+    category: "Website Development",
+    title: "Baklavachi — Turkish Sweets Website",
+    description: "A modern business website designed to showcase premium Turkish sweets and improve online presence.",
+    imageUrl: "/baklavachi.png",
+    techStack: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    details: {
+      overview: "Baklavachi is a Turkish sweets brand specializing in traditional desserts such as baklava. The brand needed a professional website to establish a strong online presence and showcase its premium products.",
+      challenge: "– No professional website\n– Limited online credibility\n– Products not presented clearly online",
+      solution: "Enhance Marketing designed and developed a custom business website focused on:\n– Clean, premium UI/UX\n– Mobile-first responsiveness\n– Clear product presentation",
+      delivered: "– Custom business website\n– Modern UI/UX design\n– Responsive layout\n– Optimized structure",
+      impact: "– Stronger brand credibility\n– Professional digital identity",
+      cta: {
+        text: "View Live Website",
+        link: "https://baklavachi.in/"
+      }
+    }
+  },
   {
     category: "Full-Stack Development",
     title: "PETGO — All-in-One Pet Care Platform",
@@ -59,24 +169,6 @@ const projects: Project[] = [
     }
   },
   {
-    category: "Website Development",
-    title: "Baklavachi — Turkish Sweets Website",
-    description: "A modern business website designed to showcase premium Turkish sweets and improve online presence.",
-    imageUrl: "/baklavachi.png",
-    techStack: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-    details: {
-      overview: "Baklavachi is a Turkish sweets brand specializing in traditional desserts such as baklava. The brand needed a professional website to establish a strong online presence and showcase its premium products.",
-      challenge: "– No professional website\n– Limited online credibility\n– Products not presented clearly online",
-      solution: "Enhance Marketing designed and developed a custom business website focused on:\n– Clean, premium UI/UX\n– Mobile-first responsiveness\n– Clear product presentation",
-      delivered: "– Custom business website\n– Modern UI/UX design\n– Responsive layout\n– Optimized structure",
-      impact: "– Stronger brand credibility\n– Professional digital identity",
-      cta: {
-        text: "View Live Website",
-        link: "https://baklavachi.in/"
-      }
-    }
-  },
-  {
     category: "Social Media Management",
     title: "Alankruti House of Designs",
     description: "Instagram account handling with reels, content strategy, and brand-consistent visuals.",
@@ -91,24 +183,6 @@ const projects: Project[] = [
       cta: {
         text: "View Instagram Profile",
         link: "https://www.instagram.com/nainaboutiqueblr/"
-      }
-    }
-  },
-  {
-    category: "Social Media Management",
-    title: "Taj Prop Estates",
-    description: "Strategic social media management for a real estate business, focusing on property showcases and brand trust.",
-    imageUrl: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Placeholder image for Taj Prop Estates
-    techStack: ["Meta Ads", "Instagram Marketing", "Lead Generation"],
-    details: {
-      overview: "Taj Prop Estates is a premium real estate firm. We manage their digital presence on Instagram and Facebook to connect with potential buyers and investors.",
-      challenge: "Real estate is competitive. The challenge was to stand out, showcase properties effectively, and build trust with a digital-first audience.",
-      solution: "We implemented a content strategy featuring high-quality property walkthroughs, market insights, and consistent branding across both Instagram and Facebook.",
-      delivered: "– Instagram & Facebook Management\n– Property Showcase Reels\n– Lead Generation Strategy\n– Brand Consistency",
-      impact: "– Increased engagement and inquiries\n– Established Taj Prop Estates as a trusted name",
-      cta: {
-        text: "View Instagram Profile",
-        link: "https://www.instagram.com/tajpropestates?igsh=Y3ZoZmh2cTlqMWgx"
       }
     }
   },
@@ -156,7 +230,11 @@ export const Portfolio = () => {
                   whileHover={{ scale: 1.02 }}
                   className="relative group rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer group-hover:shadow-[0_0_20px_theme(colors.neon-blue)]"
                 >
-                  <img src={project.imageUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                  {project.videoUrl && !project.imageUrl ? (
+                    <video src={project.videoUrl} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
+                  ) : (
+                    <img src={project.imageUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent" />
 
                   <div className="absolute bottom-0 left-0 p-8 w-full">
@@ -174,7 +252,11 @@ export const Portfolio = () => {
       <Modal show={selectedProject !== null} onClose={() => setSelectedProject(null)}>
         {selectedProject && (
           <div>
-            <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg mb-6" />
+            {selectedProject.videoUrl ? (
+              <video src={selectedProject.videoUrl} autoPlay controls playsInline className="w-full max-h-[400px] object-cover rounded-lg mb-6" />
+            ) : (
+              <img src={selectedProject.imageUrl} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg mb-6" />
+            )}
             <div className="text-neon-blue text-sm font-bold mb-2 uppercase tracking-wider">{selectedProject.category}</div>
             <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
 
