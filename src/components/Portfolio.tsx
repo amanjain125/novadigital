@@ -55,7 +55,7 @@ const projects: Project[] = [
       impact: "– 98.8K+ views on the highest-performing reel\n– 46.1K+ views generated in the last 30 days\n– 3.8K+ interactions in the last 30 days\n– 370+ organically grown followers",
       cta: {
         text: "View Instagram Profile",
-        link: "https://www.instagram.com/reel/DZbq5vXCM_0/?igsh=MWZnbHBsOG53Z20zdw=="
+        link: "https://www.instagram.com/mansiii_this_side28?igsh=bzdwczMxeTAwZ3U5&utm_source=qr"
       }
     }
   },
