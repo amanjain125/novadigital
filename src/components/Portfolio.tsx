@@ -208,27 +208,77 @@ const projects: Project[] = [
 
 export const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeFilter, setActiveFilter] = useState<string>('All');
+
+  const filters = ['All', 'Web Dev', 'Social Media', 'Video Editing'];
+
+  const filteredProjects = projects.filter(project => {
+    if (activeFilter === 'All') return true;
+    if (activeFilter === 'Web Dev') {
+      return (
+        project.category.toLowerCase().includes('development') ||
+        project.category.toLowerCase().includes('website')
+      );
+    }
+    if (activeFilter === 'Social Media') {
+      return (
+        (project.details.cta.link.includes('instagram.com') ||
+         project.category.toLowerCase().includes('social media') ||
+         project.category.toLowerCase().includes('personal brand') ||
+         project.category.toLowerCase().includes('storytelling')) &&
+        !project.title.toLowerCase().includes('motivational video')
+      );
+    }
+    if (activeFilter === 'Video Editing') {
+      return (
+        project.title.toLowerCase().includes('promotional video') ||
+        project.details.cta.link.includes('instagram.com') ||
+        project.category.toLowerCase().includes('social media') ||
+        project.category.toLowerCase().includes('personal brand') ||
+        project.category.toLowerCase().includes('short-form') ||
+        project.category.toLowerCase().includes('storytelling') ||
+        (project.techStack?.some(tech => 
+          tech.toLowerCase().includes('editing') || 
+          tech.toLowerCase().includes('video') || 
+          tech.toLowerCase().includes('reel')
+        ) ?? false)
+      );
+    }
+    return true;
+  });
 
   return (
     <>
       <section id="work" className="py-24 bg-navy-800/30">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Our Work</h2>
-              <p className="text-gray-400">Real projects. Real results. Real growth.</p>
-            </div>
-            <button className="text-neon-blue border-b border-neon-blue pb-1 hover:text-white hover:border-white transition-colors">
-              View All Projects
-            </button>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Our Work</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Real projects. Real results. Real growth.</p>
+          </div>
+
+          {/* Category Filters */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  activeFilter === filter
+                    ? 'bg-gradient-to-r from-neon-blue to-neon-purple text-white shadow-[0_0_15px_rgba(0,242,254,0.4)]'
+                    : 'bg-navy-800/60 text-gray-400 hover:text-white hover:bg-navy-700/80 border border-navy-700/50'
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project: Project, index: number) => (
+            {filteredProjects.map((project: Project, index: number) => (
               <div key={index} onClick={() => setSelectedProject(project)}>
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="relative group rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer group-hover:shadow-[0_0_20px_theme(colors.neon-blue)]"
+                  className="relative group rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer hover:shadow-[0_0_25px_rgba(38,125,255,0.4)] border border-transparent hover:border-neon-blue/30 transition-all duration-300"
                 >
                   {project.videoUrl && !project.imageUrl ? (
                     <video src={project.videoUrl} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
@@ -245,6 +295,12 @@ export const Portfolio = () => {
                 </motion.div>
               </div>
             ))}
+          </div>
+
+          <div className="flex justify-center mt-12">
+            <button className="text-neon-blue border-b border-neon-blue pb-1 hover:text-white hover:border-white transition-colors">
+              View All Projects
+            </button>
           </div>
         </div>
       </section>

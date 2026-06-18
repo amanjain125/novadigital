@@ -4,7 +4,7 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -17,7 +17,6 @@ const itemVariants = {
     transition: { duration: 0.6, ease: 'easeOut' } 
   },
 };
-
 
 export const About = () => {
   return (
@@ -35,7 +34,7 @@ export const About = () => {
           className="text-center mb-16"
         >
           <motion.h2 variants={itemVariants} className="text-3xl md:text-5xl font-display font-bold mb-3 text-white">About Enhance Marketing</motion.h2>
-          <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400">Built by creators. Driven by results.</motion.p>
+          <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400">Enhance Your Presence. Accelerate Your Growth.</motion.p>
         </motion.div>
 
         <motion.div 
@@ -47,18 +46,24 @@ export const About = () => {
         >
           {/* Left Column: Story */}
           <motion.div variants={itemVariants} className="md:col-span-3 space-y-6 text-gray-300 text-lg leading-relaxed">
-            <p>
-              At Enhance Marketing, we help brands build a strong, memorable digital presence. We are a team of creators and strategists passionate about branding, design, and social media.
+            <p className="font-semibold text-white text-xl">
+              At Enhance Marketing, we believe every business deserves a strong digital presence that drives real growth.
             </p>
             <p>
-              We help businesses stand out, scale faster, and stay relevant with clean visuals, engaging content, and custom digital experiences.
+              Founded by a team of passionate engineering students and digital creators, Enhance Marketing helps brands stand out online through strategic social media management, high-quality content creation, professional website development, and performance-driven digital marketing.
             </p>
             <p>
-              No guesswork, no overcomplication. We focus on structured, growth-focused solutions that connect with your audience and deliver real results.
+              Our mission is simple: turn ideas into impactful digital experiences. Whether it's growing your brand on social media, creating engaging video content, building a modern website, or generating quality leads, we focus on delivering measurable results that help businesses scale.
             </p>
-            <p className="font-display text-2xl text-white font-semibold italic border-l-4 border-neon-blue pl-6 py-2">
-              “Good digital presence isn’t optional anymore — it’s essential.”
+            <p>
+              We combine creativity, technology, and data-driven strategies to create marketing solutions tailored to each client's goals. From local businesses to growing startups, we work as an extension of your team to build visibility, engagement, and long-term success.
             </p>
+            <div className="border-l-4 border-neon-blue pl-6 py-3 my-8 bg-navy-800/20 rounded-r-lg">
+              <span className="block text-sm uppercase tracking-wider text-neon-blue font-bold mb-1">Our Motto</span>
+              <p className="font-display text-2xl text-white font-semibold italic">
+                "Enhance Your Presence. Accelerate Your Growth." 🚀
+              </p>
+            </div>
           </motion.div>
 
           {/* Right Column: Visual Cards */}
@@ -66,29 +71,46 @@ export const About = () => {
             variants={containerVariants}
             className="md:col-span-2 space-y-8"
           >
-            <motion.div variants={itemVariants} whileHover="hover" className="glass-card p-6 rounded-xl">
+            {/* What We Do Card */}
+            <motion.div variants={itemVariants} whileHover={{ y: -5 }} className="glass-card p-6 rounded-xl border border-white/5 hover:border-neon-blue/30 hover:shadow-[0_0_20px_rgba(38,125,255,0.25)] transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                 <span className="text-neon-blue mr-3 text-2xl">◆</span>
-                What Drives Us
+                What We Do
               </h3>
-              <ul className="space-y-3">
-                <li>Building real digital value, not just visuals.</li>
-                <li>Helping brands grow with strategy, not trends.</li>
-                <li>Creating systems that scale with time.</li>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="text-neon-blue">•</span> Social Media Management
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-neon-blue">•</span> Video Editing & Content Creation
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-neon-blue">•</span> Website Design & Development
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-neon-blue">•</span> Branding & Creative Design
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-neon-blue">•</span> Performance Marketing
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-neon-blue">•</span> SEO & Lead Generation
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-neon-blue">•</span> AI-Powered Business Automation
+                </li>
               </ul>
             </motion.div>
 
-            <motion.div variants={itemVariants} whileHover="hover" className="glass-card p-6 rounded-xl">
+            {/* Our Vision Card */}
+            <motion.div variants={itemVariants} whileHover={{ y: -5 }} className="glass-card p-6 rounded-xl border border-white/5 hover:border-neon-blue/30 hover:shadow-[0_0_20px_rgba(38,125,255,0.25)] transition-all duration-300">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                 <span className="text-neon-purple mr-3 text-2xl">◆</span>
-                Our Team
+                Our Vision
               </h3>
-              <p className="text-sm mb-4">Enhance Marketing is led by three founders with a shared vision of building meaningful digital solutions.</p>
-              <div className="space-y-3 text-sm">
-                <p><strong className="font-semibold text-gray-200 block">Aman R Jain</strong><span className="text-gray-400">Founder | Tech & Strategy</span></p>
-                <p><strong className="font-semibold text-gray-200 block">Kalyani Birajdar</strong><span className="text-gray-400">Founder | Content & Social Media</span></p>
-                <p><strong className="font-semibold text-gray-200 block">Mansi</strong><span className="text-gray-400">Founder | Design & Creative</span></p>
-              </div>
+              <p className="text-sm leading-relaxed">
+                To become a trusted digital growth partner for businesses worldwide by delivering innovative marketing solutions that create lasting impact.
+              </p>
             </motion.div>
           </motion.div>
         </motion.div>
