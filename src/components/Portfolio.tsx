@@ -25,7 +25,7 @@ interface Project {
 const projects: Project[] = [
   {
     category: "Personal Brand Growth",
-    title: "Aman R Jain(@duffer_16._) — Tech & AI Content Creator",
+    title: "Aman R Jain(@duffer_16._) - Tech & AI Content Creator",
     description: "Technology-focused Instagram page simplifying AI tools, coding concepts, and productivity hacks for students.",
     imageUrl: "/aman_cover_page.jpeg",
     techStack: ["Content Strategy", "Video Editing", "Thumbnail Design"],
@@ -43,7 +43,7 @@ const projects: Project[] = [
   },
   {
     category: "Personal Brand Growth",
-    title: "Mansi (@mansiii_this_side28) — Motivational Content Creator",
+    title: "Mansi (@mansiii_this_side28) - Motivational Content Creator",
     description: "Motivational content creator inspiring students with relatable life experiences and self-improvement lessons.",
     imageUrl: "/mansi_cover_page.jpeg",
     techStack: ["Content Strategy", "Storytelling", "Community Building"],
@@ -80,7 +80,7 @@ const projects: Project[] = [
   },
   {
     category: "Video Editing",
-    title: "OSCode GCU (@oscode_gcu) — Event Storytelling",
+    title: "OSCode GCU (@oscode_gcu) - Event Storytelling",
     description: "Engaging short-form content and event recaps capturing the energy of community tech events.",
     imageUrl: "/oscode.png",
     techStack: ["Video Editing", "Content Creation", "Storytelling"],
@@ -98,7 +98,7 @@ const projects: Project[] = [
   },
   {
     category: "Short-Form Content",
-    title: "Motivational Video — Time Management",
+    title: "Motivational Video - Time Management",
     description: "A motivational short-form video combining cinematic clips with a meaningful message about planning and productivity.",
     imageUrl: "/mansi28.jpeg",
     techStack: ["Video Editing", "Cinematic Storytelling", "Social Media"],
@@ -116,7 +116,7 @@ const projects: Project[] = [
   },
   {
     category: "Website Development",
-    title: "Baklavachi — Turkish Sweets Website",
+    title: "Baklavachi - Turkish Sweets Website",
     description: "A modern business website designed to showcase premium Turkish sweets and improve online presence.",
     imageUrl: "/baklavachi.png",
     techStack: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
@@ -134,7 +134,7 @@ const projects: Project[] = [
   },
   {
     category: "Full-Stack Development",
-    title: "PETGO — All-in-One Pet Care Platform",
+    title: "PETGO - All-in-One Pet Care Platform",
     description: "A multi-service platform simplifying pet care through ride booking, ambulance support, and food delivery.",
     imageUrl: "/petgo_preview.png",
     techStack: ["Node.js", "Express.js", "SQLite", "HTML/CSS", "JavaScript"],
@@ -152,7 +152,7 @@ const projects: Project[] = [
   },
   {
     category: "Full-Stack Development",
-    title: "NaturalCare — Natural Wellness Platform",
+    title: "NaturalCare - Natural Wellness Platform",
     description: "A full-stack application providing personalized natural remedies for skin and hair care based on skin type.",
     imageUrl: "/naturalcare_preview.png",
     techStack: ["Python", "Flask", "SQLite", "Git", "Render"],
@@ -182,13 +182,13 @@ const projects: Project[] = [
       impact: "– Improved visual identity\n– Better engagement quality",
       cta: {
         text: "View Instagram Profile",
-        link: "https://www.instagram.com/nainaboutiqueblr/"
+        link: "https://www.instagram.com/alankruthihouseofdesigns?igsh=NjE4Zm4yNGdxbW1i"
       }
     }
   },
   {
     category: "Website Development · Brand Identity",
-    title: "Enhance Marketing — Agency Website & Brand System",
+    title: "Enhance Marketing - Agency Website & Brand System",
     description: "The Enhance Marketing website was designed and built as an internal project to represent the agency’s capabilities, standards, and approach to modern digital experiences.",
     imageUrl: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", // Placeholder image for Enhance Marketing website
     techStack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],

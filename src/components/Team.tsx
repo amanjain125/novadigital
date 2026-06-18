@@ -6,21 +6,24 @@ const founders = [
     role: "Founder & Technical Lead",
     description: "Handles overall technical execution, backend systems, and technological strategy to power our digital solutions.",
     initials: "KB",
-    imageUrl: "/kalyani.jpeg"
+    imageUrl: "/kalyani.jpeg",
+    linkedin: "https://www.linkedin.com/in/kalyani-birajdar-558749355/"
   },
   {
     name: "Aman R Jain",
     role: "Founder & Operations Lead",
     description: "Handles editing, social media strategy, and technical development across all core services.",
     initials: "AJ",
-    imageUrl: "/aman.jpeg"
+    imageUrl: "/aman.jpeg",
+    linkedin: "https://www.linkedin.com/in/aman-r-jain-342006356/"
   },
   {
     name: "Mansi",
     role: "Founder & Creative Lead",
     description: "Spearheads video editing, social media handling, and creative brand design for clients.",
     initials: "M",
-    imageUrl: "/mansi.jpeg"
+    imageUrl: "/mansi.jpeg",
+    linkedin: "https://www.linkedin.com/in/mansi-42a743355/"
   }
 ];
 
@@ -87,7 +90,9 @@ export const Team = () => {
                 )}
               </div>
               <div className="flex-1 flex flex-col justify-start">
-                <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-neon-blue transition-colors">{founder.name}</h3>
+                <a href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="inline-block group-hover:underline">
+                  <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-neon-blue transition-colors">{founder.name}</h3>
+                </a>
                 <p className="text-neon-blue text-sm font-semibold tracking-wider uppercase mb-4">{founder.role}</p>
                 <p className="text-gray-400 text-sm leading-relaxed">{founder.description}</p>
               </div>
