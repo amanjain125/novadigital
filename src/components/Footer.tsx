@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-2">
-            <h2 className="text-2xl font-display font-bold mb-4">ENHANCE<span className="text-neon-blue">MARKETING</span></h2>
+            <img src="/logo.png?v=2" alt="Enhance Marketing" className="h-20 md:h-24 w-auto mb-4" />
             <p className="text-gray-400 max-w-sm mb-6">
               We help businesses stand out, scale faster, and stay relevant in the digital world.
             </p>

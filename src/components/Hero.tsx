@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaInstagram, FaChartLine, FaArrowRight } from 'react-icons/fa';
+import { ScrollReveal } from './ScrollReveal';
+import { Parallax } from './Parallax';
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -12,22 +14,24 @@ export const Hero = () => {
   return (
     <section className="min-h-screen relative flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden perspective-2000">
 
-      {/* Breathing Background Glow */}
-      <motion.div
-        animate={{
-          opacity: [0.4, 0.8, 0.4],
-          scale: [1, 1.2, 1]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-blue/20 rounded-full blur-[120px] -z-10"
-      />
+      {/* Breathing Background Glow with deep Parallax */}
+      <Parallax offset={100} className="absolute inset-0 pointer-events-none -z-10">
+        <motion.div
+          animate={{
+            opacity: [0.4, 0.8, 0.4],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-blue/20 rounded-full blur-[120px]"
+        />
+      </Parallax>
 
-      {/* 3D Visual Content (Placed Before Text) */}
-      <div className="relative w-full max-w-6xl mx-auto h-[350px] md:h-[500px] mb-8 md:mb-12 perspective-1000">
+      {/* 3D Visual Content (Placed Before Text) with subtle Parallax */}
+      <Parallax offset={30} className="relative w-full max-w-6xl mx-auto h-[350px] md:h-[500px] mb-8 md:mb-12 perspective-1000">
         <motion.div
           className="relative w-full h-full flex items-center justify-center transform-style-3d"
           initial={{ rotateX: 20, opacity: 0 }}
@@ -95,8 +99,8 @@ export const Hero = () => {
           <motion.div
             className="absolute bottom-[-5%] sm:bottom-0 md:bottom-auto md:top-[40%] left-[5%] md:-left-24 w-auto min-w-[180px] md:w-80 p-4 md:p-8 bg-[#0a0f1c]/90 backdrop-blur-md border border-neon-purple/30 rounded-2xl shadow-[0_0_30px_rgba(176,38,255,0.15)] z-30"
             animate={{
-              y: [0, -25, 0],
-              opacity: [0.9, 1, 0.9]
+               y: [0, -25, 0],
+               opacity: [0.9, 1, 0.9]
             }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           >
@@ -117,37 +121,31 @@ export const Hero = () => {
           </motion.div>
 
         </motion.div>
-      </div>
+      </Parallax>
 
       {/* Text Content (Placed After Visual) */}
       <div className="text-center space-y-8 max-w-4xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <ScrollReveal delay={0}>
           <h1 className="text-4xl md:text-7xl font-display font-bold leading-tight tracking-tight mb-6">
             We Build <span className="text-gradient">Digital Empires</span>
           </h1>
+        </ScrollReveal>
+        
+        <ScrollReveal delay={0.15}>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
             Complete digital transformation. From high-performance websites to viral social strategies.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="px-8 py-4 bg-neon-blue hover:bg-blue-600 text-white font-bold rounded-lg shadow-[0_0_30px_rgba(38,125,255,0.3)] transition-all flex items-center gap-2 group"
-            >
-              Get a Free Strategy Call
-              <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button
-              onClick={() => scrollToSection('work')}
-              className="px-8 py-4 text-gray-300 hover:text-white font-medium transition-colors border border-white/10 rounded-lg hover:bg-white/5"
-            >
-              View Our Work
-            </button>
-          </div>
-        </motion.div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.3} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <button
+            onClick={() => scrollToSection('work')}
+            className="px-8 py-4 bg-neon-blue hover:bg-blue-600 text-white font-bold rounded-lg shadow-[0_0_30px_rgba(38,125,255,0.3)] transition-all flex items-center gap-2 group"
+          >
+            View Our Work
+            <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </ScrollReveal>
       </div>
 
     </section>

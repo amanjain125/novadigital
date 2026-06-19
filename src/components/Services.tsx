@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaHashtag, FaVideo, FaLaptopCode, FaBullhorn, FaSearch } from 'react-icons/fa';
 import { Modal } from './Modal';
+import { ScrollReveal } from './ScrollReveal';
 
 interface Service {
   icon: JSX.Element;
@@ -36,7 +37,7 @@ const services: Service[] = [
       whatWeDo: "– Social media strategy & planning\n– Content calendar creation\n– Instagram account handling\n– Post & reel scheduling\n– Caption writing & hashtag research\n– Visual consistency & branding\n– Engagement-focused posting\n– Performance monitoring & optimization",
       ourApproach: "We don’t believe in random posting. Every piece of content is planned, aligned with your brand, and optimized for growth.",
       cta: {
-        text: "Get a Free Strategy Call",
+        text: "Contact Us",
         link: "#contact"
       }
     }
@@ -54,8 +55,8 @@ const services: Service[] = [
       whatWeDo: "– Reel & short-form video editing\n– Trend-based hooks\n– Subtitles & motion graphics\n– Brand-aligned visual style\n– Fast-paced, retention-focused edits\n– Platform-optimized formats",
       ourApproach: "We focus on storytelling, pacing, and psychology to keep viewers watching and engaging.",
       cta: {
-        text: "View Our Work",
-        link: "#work"
+        text: "Contact Us",
+        link: "#contact"
       }
     }
   },
@@ -72,7 +73,7 @@ const services: Service[] = [
       whatWeDo: "– Custom website design\n– Business & portfolio websites\n– Mobile-first responsive layouts\n– Clean UI/UX design\n– SEO-friendly structure\n– Fast-loading performance optimization\n– Conversion-focused layout",
       ourApproach: "We combine design, performance, and strategy to build websites that create trust and drive action.",
       cta: {
-        text: "Build My Website",
+        text: "Contact Us",
         link: "#contact"
       }
     }
@@ -90,7 +91,7 @@ const services: Service[] = [
       whatWeDo: "– Meta Ads (Facebook & Instagram)\n– Google Search & Display Ads\n– Audience Targeting & Retargeting\n– Ad Creative Design & Copywriting\n– A/B Testing & Optimization\n– Monthly Performance Reports",
       ourApproach: "We focus on metrics that matter—Leads, Sales, and ROAS—not just vanity metrics like impressions.",
       cta: {
-        text: "Start Scaling Today",
+        text: "Contact Us",
         link: "#contact"
       }
     }
@@ -108,7 +109,7 @@ const services: Service[] = [
       whatWeDo: "– Google My Business (GMB) Optimization\n– Local SEO Strategy\n– On-Page & Off-Page SEO\n– Keyword Research & Competitor Analysis\n– Review Management & Reputation Building\n– Citation Building & Directory Listings",
       ourApproach: "SEO is a long-term game. We build a solid foundation that keeps your business ranking high for years to come.",
       cta: {
-        text: "Rank Higher Now",
+        text: "Contact Us",
         link: "#contact"
       }
     }
@@ -133,26 +134,31 @@ export const Services = () => {
       <section id="services" className="py-24 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">What We Do</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">We don’t believe in random posting. We build growth-focused digital systems.</p>
+            <ScrollReveal delay={0}>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">What We Do</h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <p className="text-gray-400 max-w-2xl mx-auto">We don’t believe in random posting. We build growth-focused digital systems.</p>
+            </ScrollReveal>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service: Service, index: number) => (
-              <motion.div
-                key={index}
-                whileHover={{ y: -10 }}
-                className={`group glass-card p-8 rounded-2xl border border-white/5 transition-all duration-300 ${service.borderColor} ${service.shadowClass} cursor-pointer`}
-                onClick={() => setSelectedService(service)}
-              >
-                <div className={`mb-6 p-4 rounded-xl bg-white/5 w-fit ${service.color}`}>
-                  {service.icon}
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
+              <ScrollReveal key={index} delay={index * 0.15}>
+                <motion.div
+                  whileHover={{ y: -10 }}
+                  className={`group glass-card p-8 rounded-2xl border border-white/5 transition-all duration-300 ${service.borderColor} ${service.shadowClass} cursor-pointer h-full`}
+                  onClick={() => setSelectedService(service)}
+                >
+                  <div className={`mb-6 p-4 rounded-xl bg-white/5 w-fit ${service.color}`}>
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {service.description}
+                  </p>
+                </motion.div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

@@ -1,14 +1,19 @@
 import React from 'react';
 import './Contact.css';
+import { ScrollReveal } from './ScrollReveal';
 
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
-        <h2 className="contact-title">Contact Us</h2>
-        <p className="contact-description">
-          Have a project in mind? We’d love to hear from you.
-        </p>
+        <ScrollReveal delay={0}>
+          <h2 className="contact-title">Contact Us</h2>
+        </ScrollReveal>
+        <ScrollReveal delay={0.15}>
+          <p className="contact-description">
+            Have a project in mind? We’d love to hear from you.
+          </p>
+        </ScrollReveal>
         <form
           action="https://formspree.io/f/mgoovbry" // Replace with your Formspree form ID
           method="POST"

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Modal } from './Modal';
+import { ScrollReveal } from './ScrollReveal';
 
 interface Project {
   category: string;
@@ -252,12 +253,16 @@ export const Portfolio = () => {
       <section id="work" className="py-24 bg-navy-800/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Our Work</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Real projects. Real results. Real growth.</p>
+            <ScrollReveal delay={0}>
+              <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Our Work</h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <p className="text-gray-400 max-w-2xl mx-auto">Real projects. Real results. Real growth.</p>
+            </ScrollReveal>
           </div>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <ScrollReveal delay={0.2} className="flex flex-wrap justify-center gap-3 mb-12">
             {filters.map((filter) => (
               <button
                 key={filter}
@@ -271,29 +276,31 @@ export const Portfolio = () => {
                 {filter}
               </button>
             ))}
-          </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
             {filteredProjects.map((project: Project, index: number) => (
-              <div key={index} onClick={() => setSelectedProject(project)}>
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="relative group rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer hover:shadow-[0_0_25px_rgba(38,125,255,0.4)] border border-transparent hover:border-neon-blue/30 transition-all duration-300"
-                >
-                  {project.videoUrl && !project.imageUrl ? (
-                    <video src={project.videoUrl} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
-                  ) : (
-                    <img src={project.imageUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent" />
+              <ScrollReveal key={index} delay={index * 0.15}>
+                <div onClick={() => setSelectedProject(project)}>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    className="relative group rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer hover:shadow-[0_0_25px_rgba(38,125,255,0.4)] border border-transparent hover:border-neon-blue/30 transition-all duration-300"
+                  >
+                    {project.videoUrl && !project.imageUrl ? (
+                      <video src={project.videoUrl} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
+                    ) : (
+                      <img src={project.imageUrl} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent" />
 
-                  <div className="absolute bottom-0 left-0 p-8 w-full">
-                    <div className="text-neon-blue text-sm font-bold mb-2 uppercase tracking-wider">{project.category}</div>
-                    <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">{project.description}</p>
-                  </div>
-                </motion.div>
-              </div>
+                    <div className="absolute bottom-0 left-0 p-8 w-full">
+                      <div className="text-neon-blue text-sm font-bold mb-2 uppercase tracking-wider">{project.category}</div>
+                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                      <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">{project.description}</p>
+                    </div>
+                  </motion.div>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
 
